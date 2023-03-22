@@ -1,0 +1,45 @@
+$font-jua:'Jua', sans-serif;
+@mixin flex-row {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    position:fixed; left:0; top:0; z-index:999;
+    background:linear-gradient(0deg,rgba(255,255,2550.5),transparent);
+    height:100px; 
+    width:100%; padding:0 15px;;
+    @include flex-row;
+    h1 { width:150px;
+        a {
+            img{width:100%}
+        }
+    }
+    .right {
+        @include flex-row;
+        padding:10px;
+        .app {
+            font-family: $font-jua;
+            color:#fff;
+            font-weight:700;
+            border:2px solid #fff;
+            border-radius: 20px;
+            padding:15px 25px;
+            margin:10px;
+            
+        }
+        .all_nav {
+            span {
+                display:block;
+                background:#fff;
+                border-radius: 15px;
+                width:30px;height:5px;
+            }
+            span:nth-child(1) {}
+            span:nth-child(2) {margin:5px 0;}
+            span:nth-child(3) {}
+        }
+    }
+}
